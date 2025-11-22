@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDGC Batna - Google Developer Groups on Campus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">جاري التحميل...</p>
+        <div class="loader-progress">
+            <div class="loader-progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">GDGC</span>
+                <span class="logo-sub">Batna</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">من نحن</a></li>
+                <li><a href="#activities" class="nav-link">النشاطات</a></li>
+                <li><a href="#events" class="nav-link">الفعاليات</a></li>
+                <li><a href="#contact" class="nav-link">تواصل</a></li>
+            </ul>
+            <a href="#contact" class="contact-btn">
+                <span>انضم إلينا</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🎓 مجتمع تقني طلابي</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">مرحباً بك في</span>
+                <span class="title-main">
+                    <span class="gradient-text">GDGC</span>
+                    <div class="word-slider">
+                        <div class="word-wrapper">
+                            <span class="word">Batna</span>
+                            <span class="word">Innovation</span>
+                            <span class="word">Technology</span>
+                            <span class="word">Community</span>
+                        </div>
+                    </div>
+                </span>
+            </h1>
+            <p class="hero-description">
+                Google Developer Groups on Campus - جامعة باتنة 2
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">
+                    <span class="cta-bg"></span>
+                    <span class="cta-text">انضم الآن</span>
+                    <span class="cta-arrow">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                </a>
+                <a href="#about" class="btn-outline">
+                    <span>اكتشف المزيد</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-3d">
+            <canvas id="canvas3d"></canvas>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>اسحب للتفاعل</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glow-card" data-color="blue">
+                    <div class="stat-number" data-target="300">0</div>
+                    <div class="stat-label">طالب نشط</div>
+                </div>
+                <div class="stat-card glow-card" data-color="red">
+                    <div class="stat-number" data-target="40">0</div>
+                    <div class="stat-label">فعالية سنوياً</div>
+                </div>
+                <div class="stat-card glow-card" data-color="green">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">مشروع طلابي</div>
+                </div>
+                <div class="stat-card glow-card" data-color="yellow">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">مجاني للطلبة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">من نحن</span>
+                <h2 class="section-title gradient-text">Google Developer Groups on Campus</h2>
+            </div>
+            <div class="about-content">
+                <p class="lead-text">
+                    <strong class="gradient-text">GDGC Batna</strong> هو مجتمع تقني طلابي رسمي في جامعة باتنة 2، يُعتبر امتداداً لنشاطات Google Developers داخل الحرم الجامعي. يقوده طلبة متطوعون متحمسون للتكنولوجيا، يهدف إلى تعريف الطلبة بأحدث التقنيات وتطوير مهاراتهم.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Showcase (Marquee) -->
+    <section class="logo-showcase">
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="marquee-item"><i class="fab fa-google"></i></div>
+                <div class="marquee-item"><i class="fab fa-android"></i></div>
+                <div class="marquee-item"><i class="fab fa-react"></i></div>
+                <div class="marquee-item"><i class="fab fa-python"></i></div>
+                <div class="marquee-item"><i class="fab fa-js"></i></div>
+                <div class="marquee-item"><i class="fab fa-node"></i></div>
+                <div class="marquee-item"><i class="fab fa-docker"></i></div>
+                <div class="marquee-item"><i class="fab fa-git-alt"></i></div>
+                <div class="marquee-item"><i class="fab fa-google"></i></div>
+                <div class="marquee-item"><i class="fab fa-android"></i></div>
+                <div class="marquee-item"><i class="fab fa-react"></i></div>
+                <div class="marquee-item"><i class="fab fa-python"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">ماذا نقدم</span>
+                <h2 class="section-title gradient-text">النشاطات والبرامج</h2>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card glow-card">
+                    <div class="activity-icon blue">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>ورشات تقنية</h3>
+                    <p>Flutter • Firebase • AI • Machine Learning • Web Development</p>
+                </div>
+                <div class="activity-card glow-card">
+                    <div class="activity-icon red">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Hackathons</h3>
+                    <p>مسابقات برمجية مكثفة لبناء حلول تقنية مبتكرة</p>
+                </div>
+                <div class="activity-card glow-card">
+                    <div class="activity-icon green">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>دورات تدريبية</h3>
+                    <p>برامج تدريبية مع شهادات معتمدة من Google</p>
+                </div>
+                <div class="activity-card glow-card">
+                    <div class="activity-icon yellow">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>جلسات تعريفية</h3>
+                    <p>Git/GitHub • إدارة المشاريع • Soft Skills</p>
+                </div>
+                <div class="activity-card glow-card">
+                    <div class="activity-icon blue">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>مشاريع جماعية</h3>
+                    <p>العمل على مشاريع واقعية لاكتساب خبرة عملية</p>
+                </div>
+                <div class="activity-card glow-card">
+                    <div class="activity-icon red">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3>Open Days</h3>
+                    <p>أيام مفتوحة للتعريف بالتكنولوجيات الحديثة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">فعالياتنا</span>
+                <h2 class="section-title gradient-text">أبرز الفعاليات</h2>
+            </div>
+            
+            <div class="event-featured glow-card">
+                <div class="event-badge">الحدث الأكبر</div>
+                <h3>DevFest Batna</h3>
+                <p>أكبر مؤتمر تقني سنوي في المنطقة يجمع مئات المطورين والشركات الناشئة</p>
+                <div class="event-stats">
+                    <span><i class="fas fa-users"></i> 500+ مشارك</span>
+                    <span><i class="fas fa-microphone"></i> 20+ متحدث</span>
+                    <span><i class="fas fa-calendar"></i> يومين</span>
+                </div>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card glow-card">
+                    <div class="event-icon green">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="event-info">
+                        <h4>DevFest Hackathon</h4>
+                        <p>مسابقة برمجية مكثفة لبناء مشاريع مبتكرة</p>
+                    </div>
+                </div>
+                <div class="event-card glow-card">
+                    <div class="event-icon yellow">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="event-info">
+                        <h4>AI Workshop Series</h4>
+                        <p>سلسلة ورشات في الذكاء الاصطناعي</p>
+                    </div>
+                </div>
+                <div class="event-card glow-card">
+                    <div class="event-icon blue">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="event-info">
+                        <h4>Flutter Study Jams</h4>
+                        <p>برنامج تعليمي لتطوير تطبيقات الموبايل</p>
+                    </div>
+                </div>
+                <div class="event-card glow-card">
+                    <div class="event-icon red">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="event-info">
+                        <h4>Cloud Study Jam</h4>
+                        <p>تعلم الحوسبة السحابية مع Google Cloud</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">تواصل معنا</span>
+                <h2 class="section-title gradient-text">انضم إلى المجتمع</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>ابدأ رحلتك التقنية معنا</h3>
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>gdgcbatna@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>جامعة باتنة 2، باتنة، الجزائر</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link blue"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link red"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link green"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link yellow"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link blue"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="الاسم" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="رسالتك" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">
+                        <span class="cta-bg"></span>
+                        <span class="cta-text">إرسال الرسالة</span>
+                        <span class="cta-arrow">
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 GDGC Batna - Google Developer Groups on Campus</p>
+                <p>Powered by <i class="fab fa-google"></i> Google Developers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
